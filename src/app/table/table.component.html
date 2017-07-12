@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row ng-dirty ng-touched ng-valid" ng-reflect-form="[object Object]">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Логин</label>
+                        <input class="form-control border-input ng-dirty ng-valid ng-touched" formcontrolname="login"
+                               placeholder="Company" required="" type="text" ng-reflect-required=""
+                               ng-reflect-name="login">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label>Пароль</label>
+                        <input class="form-control border-input ng-dirty ng-valid ng-touched" formcontrolname="password"
+                               placeholder="Last Name" required="" type="password" ng-reflect-required=""
+                               ng-reflect-name="password">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label>Пароль</label>
+                    <div class="form-group">
+                        <button class="btn btn-info btn-fill btn-wd"
+                                (click)="onFormSubmit()">Вход
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="header">
+                    <h4 class="title">Striped Table</h4>
+                    <p class="category">Here is a subtitle for this table</p>
+                </div>
+                <div class="content table-responsive table-full-width">
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th *ngFor="let cell of tableData1.headerRow">{{ cell }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let row of tableData1.dataRows">
+                            <td *ngFor="let cell of row">{{cell}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
