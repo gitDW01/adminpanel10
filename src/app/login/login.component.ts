@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormGroup, FormControl, Validators} from "@angular/forms";
 import {RouteInformation} from "../RouteInfo";
 import {Router} from "@angular/router";
-import {SidebarComponent} from "../sidebar/sidebar.component";
+import {AutenticationService} from "../autentication.service";
 
 @Component({
     selector: 'dashboard-cmp',
@@ -16,24 +16,28 @@ export class LoginComponent implements OnInit {
         password: new FormControl('', Validators.required),
     });
 
-    constructor(private routes: RouteInformation,private router: Router) {
+    constructor(private routes: RouteInformation, private router: Router, private autenticationService: AutenticationService) {
     };
 
     onFormSubmit(): void {
         this.routes.deleteRoutes();
         let login = this.form.get('login').value;
         let password = this.form.get('password').value;
+
         switch (login) {
             case 'admin': {
                 this.router.navigate(['/table']);
+                this.autenticationService.setUserUsername('admin');
                 break;
             }
             case 'manager': {
                 this.router.navigate(['/table']);
+                this.autenticationService.setUserUsername('manager');
                 break;
             }
             case 'user': {
                 this.router.navigate(['/user']);
+                this.autenticationService.setUserUsername('user');
                 break;
             }
         }

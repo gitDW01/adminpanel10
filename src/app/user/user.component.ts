@@ -10,7 +10,6 @@ import {RouteInformation} from "../RouteInfo";
 export class UserComponent implements OnInit{
     constructor(private routes: RouteInformation){}
     ngOnInit(){
-        this.routes.setRoutesAsUser();
         this.routes.changeNav('user');
     }
 }
