@@ -9,8 +9,6 @@ declare var $:any;
 })
 
 export class AppComponent implements OnInit{
-  constructor(private route: Router){}
   ngOnInit(){
-    this.route.events.subscribe(url => console.log(url));
   }
 }
