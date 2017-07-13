@@ -18,8 +18,10 @@ export class TableComponent implements OnInit{
     constructor(private routes: RouteInformation){}
 
     ngOnInit(){
+/*
         this.routes.setRoutesAsAdmin();
         this.routes.changeNav('table');
+*/
 
         console.log('TABLE')
         this.tableData1 = {

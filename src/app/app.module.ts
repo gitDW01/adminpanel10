@@ -17,10 +17,11 @@ import { IconsComponent }   from './icons/icons.component';
 import { MapsComponent }   from './maps/maps.component';
 import { NotificationsComponent }   from './notifications/notifications.component';
 import { LoginComponent } from "./login/login.component";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {SidebarComponent} from "./sidebar/sidebar.component";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ApplicationInfoComponent } from './application-info/application-info.component';
 import { ShopInfoComponent } from './shop-info/shop-info.component';
+import {AuthGuard} from "./auth-guard.guard";
+import {AutenticationService} from "./autentication.service";
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import { ShopInfoComponent } from './shop-info/shop-info.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AuthGuard, AutenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
