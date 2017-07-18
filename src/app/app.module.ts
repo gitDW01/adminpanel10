@@ -4,13 +4,12 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routing';
-import { SidebarModule } from './sidebar/sidebar.module';
+import { SidebarModule } from './navigation/sidebar.module';
 import { FooterModule } from './shared/footer/footer.module';
 import { NavbarModule} from './shared/navbar/navbar.module';
 import { FixedPluginModule} from './shared/fixedplugin/fixedplugin.module';
 import { NguiMapModule} from '@ngui/map';
 
-import { UserComponent }   from './user/user.component';
 import { TableComponent }   from './table/table.component';
 import { TypographyComponent }   from './typography/typography.component';
 import { IconsComponent }   from './icons/icons.component';
@@ -22,12 +21,14 @@ import { ApplicationInfoComponent } from './application-info/application-info.co
 import { ShopInfoComponent } from './shop-info/shop-info.component';
 import {AuthGuard} from "./auth-guard.guard";
 import {AutenticationService} from "./autentication.service";
+import { NewsComponent } from './news/news.component';
+import { SalesComponent } from './sales/sales.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    UserComponent,
     TableComponent,
     TypographyComponent,
     IconsComponent,
@@ -35,6 +36,9 @@ import {AutenticationService} from "./autentication.service";
     NotificationsComponent,
     ApplicationInfoComponent,
     ShopInfoComponent,
+    NewsComponent,
+    SalesComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,

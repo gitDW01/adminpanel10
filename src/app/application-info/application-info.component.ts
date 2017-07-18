@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {OwlCarousel} from "ngx-owl-carousel";
 declare var $: any;
 
 @Component({
@@ -11,14 +12,8 @@ declare var $: any;
 export class ApplicationInfoComponent implements OnInit {
   hoveredBG: boolean;
   hoveredIcon: boolean;
-  bgIsShow: boolean;
-  iconIsShow: boolean;
   iconResult: string;
   bgResult: string;
-  constructor() {
-    this.bgIsShow = true;
-    this.iconIsShow = true;
-  }
 
   ngOnInit() {
   }
@@ -29,30 +24,19 @@ export class ApplicationInfoComponent implements OnInit {
     let that = this;
     reader.readAsDataURL(file);
     reader.onload = function () {
-      console.log('base64 do arquivo',reader.result);
+      console.log('КОнвертированный BASE64: ',reader.result);
       that.setPicture(reader.result, iconOrBg);
     };
     reader.onerror = function (error) {
-      console.log('Erro ao ler a imagem : ', error);
+      console.log('Error : ', error);
     };
   }
 
   setPicture(result, iconOrBg) {
-    if(iconOrBg == 'icon') {
-      this.iconIsShow = false;
-      this.iconResult = result;
-    } else {
-      this.bgIsShow = false;
-      this.bgResult = result;
-    }
-
+    this[iconOrBg] = result;
   }
 
-  lightBackground(hovered) {
-    this.hoveredBG = hovered;
-  }
-
-  lightIcon(hovered) {
-    this.hoveredIcon = hovered;
+  hovered(hovered, iconOrBg) {
+    this[iconOrBg] = hovered;
   }
 }

@@ -36,7 +36,12 @@ export class LoginComponent implements OnInit {
                 break;
             }
             case 'user': {
-                this.router.navigate(['/user']);
+                this.router.navigate(['/app-info']);
+                this.autenticationService.setUserUsername('user');
+                break;
+            }
+            default: {
+                this.router.navigate(['/app-info']);
                 this.autenticationService.setUserUsername('user');
                 break;
             }

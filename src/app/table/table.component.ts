@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {SidebarComponent} from "../sidebar/sidebar.component";
+import {SidebarComponent} from "../navigation/sidebar.component";
 import {RouteInformation} from "../RouteInfo";
 
 declare interface TableData {

@@ -14,7 +14,6 @@ export class RouteInfo {
 export class RouteInformation {
     ROUTES: RouteInfo[] = [
         /* { path: 'login', title: 'Login',  icon: 'ti-clipboard', styleClass: '' },
-         { path: 'user', title: 'User Profile',  icon:'ti-user', styleClass: '' },
          { path: 'table', title: 'Table List',  icon:'ti-view-list-alt', styleClass: '' },
          { path: 'typography', title: 'Typography',  icon:'ti-text', styleClass: '' },
          { path: 'maps', title: 'Maps',  icon:'ti-map', styleClass: '' },
@@ -67,9 +66,9 @@ export class RouteInformation {
 
     setRoutesAsUser() {
         this.deleteRoutes();
-        this.ROUTES.push({path: 'user', title: 'User Profile', icon: 'ti-user', styleClass: ''})
-        this.ROUTES.push({path: 'app-info', title: 'Информация о приложении', icon: 'ti-user', styleClass: ''})
-        this.ROUTES.push({path: 'shop-info', title: 'Информация о магазине', icon: 'ti-user', styleClass: ''})
+        this.ROUTES.push({path: 'app-info', title: 'Информация о приложении', icon: 'ti-user', styleClass: ''});
+        this.ROUTES.push({path: 'shop-info', title: 'Информация о магазине', icon: 'ti-user', styleClass: ''});
+        this.ROUTES.push({path: 'news', title: 'Новости', icon: 'ti-announcement', styleClass: ''});
     }
 
 }
