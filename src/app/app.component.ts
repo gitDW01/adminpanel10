@@ -1,5 +1,4 @@
 import {Component, OnInit} from "@angular/core";
-import {ActivatedRoute, Router} from "@angular/router";
 declare var $:any;
 
 @Component({
@@ -11,4 +10,5 @@ declare var $:any;
 export class AppComponent implements OnInit{
   ngOnInit(){
   }
+
 }

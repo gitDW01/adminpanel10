@@ -25,6 +25,7 @@ import { NewsComponent } from './news/news.component';
 import { SalesComponent } from './sales/sales.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { BasketComponent } from './basket/basket.component';
+import { NewsModalComponent } from './modals/news-modal/news-modal.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { BasketComponent } from './basket/basket.component';
     NewsComponent,
     SalesComponent,
     GalleryComponent,
-    BasketComponent
+    BasketComponent,
+    NewsModalComponent
   ],
   imports: [
     BrowserModule,

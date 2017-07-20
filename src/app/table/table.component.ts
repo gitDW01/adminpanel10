@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {SidebarComponent} from "../navigation/sidebar.component";
 import {RouteInformation} from "../RouteInfo";
 
@@ -13,19 +13,15 @@ declare interface TableData {
     templateUrl: 'table.component.html'
 })
 
-export class TableComponent implements OnInit{
+export class TableComponent implements OnInit {
     public tableData1: TableData;
-    constructor(private routes: RouteInformation){}
 
-    ngOnInit(){
-/*
-        this.routes.setRoutesAsAdmin();
-        this.routes.changeNav('table');
-*/
+    constructor(private routes: RouteInformation) {
+    }
 
-        console.log('TABLE')
+    ngOnInit() {
         this.tableData1 = {
-            headerRow: [ 'ID', 'Name', 'Country', 'City', 'Salary'],
+            headerRow: ['ID', 'Name', 'Country', 'City', 'Salary'],
             dataRows: [
                 ['1', 'Dakota Rice', 'Niger', 'Oud-Turnhout', '$36,738'],
                 ['2', 'Minerva Hooper', 'Curaçao', 'Sinaai-Waas', '$23,789'],
@@ -35,5 +31,9 @@ export class TableComponent implements OnInit{
                 ['6', 'Mason Porter', 'Chile', 'Gloucester', '$78,615']
             ]
         };
+    }
+
+    onFormSubmit() {
+        console.log('Мы вошли')
     }
 }

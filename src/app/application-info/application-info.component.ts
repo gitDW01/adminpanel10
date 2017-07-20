@@ -1,5 +1,5 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
-import {OwlCarousel} from "ngx-owl-carousel";
+import {Component, OnInit} from '@angular/core';
+import {WorkWithImages} from "../shared/classes/work-with-images";
 declare var $: any;
 
 @Component({
@@ -19,17 +19,7 @@ export class ApplicationInfoComponent implements OnInit {
   }
 
   upLoadBackground(readerEvt, iconOrBg) {
-    let file = readerEvt.target.files[0];
-    let reader = new FileReader();
-    let that = this;
-    reader.readAsDataURL(file);
-    reader.onload = function () {
-      console.log('КОнвертированный BASE64: ',reader.result);
-      that.setPicture(reader.result, iconOrBg);
-    };
-    reader.onerror = function (error) {
-      console.log('Error : ', error);
-    };
+    WorkWithImages.upLoadBackground((result, iconOrBg) => this.setPicture(result, iconOrBg), readerEvt, iconOrBg);
   }
 
   setPicture(result, iconOrBg) {
