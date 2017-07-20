@@ -24,6 +24,7 @@ import {AutenticationService} from "./autentication.service";
 import { NewsComponent } from './news/news.component';
 import { SalesComponent } from './sales/sales.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { BasketComponent } from './basket/basket.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { GalleryComponent } from './gallery/gallery.component';
     ShopInfoComponent,
     NewsComponent,
     SalesComponent,
-    GalleryComponent
+    GalleryComponent,
+    BasketComponent
   ],
   imports: [
     BrowserModule,
